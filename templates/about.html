@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block title %} Leif's Notes{% endblock %}
+{% block page_class %} page-about {% endblock %}
+
+{% block content %}
+<div class="col-mb-12 col-8" id="main" role="main">
+    <h2 class="post-title">关于我</h2>
+    <p>这是我的个人站点, 一直在互联网行业做技术开发相关工作, 对程序语言有一点研究, 对技术架构有一点实践经验, </p>
+    <p>技术背景包括:Python、Php、MySQL、NoSQL、Unix/Linux、Web架构。</p>
+    <p>我的电子邮箱是: yuleicc#gmail.com , <a href="http://weibo.com/yuleicc">微博</a>偶尔用</p>
+    <h2 class="post-title">关于博客</h2>
+    <p>博客的初衷是希望把自己平常总结的东西记录下来，以便不时之需可以翻阅,</p>
+    <p>内存有限（记性不好）,只能借用外界载体（博客）来存储这些信息。</p>
+</div>
+{% endblock %}
+
+{% block sidebar %}
+{% include '_macro/sidebar.html' %}
+{% endblock %}

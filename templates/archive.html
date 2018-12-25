@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+{% block title %} 归档 | {{ config.title }} {% endblock %}
+{% block page_class %} page-archive {% endblock %}
+{% block content %}
+<div class="col-mb-12 col-8" id="main" role="main">
+    <span class="archive-move-on"></span>
+    {% for post in posts %}
+    {% if post.year %}
+    <div class="collection-title">
+        <h2 class="archive-year motion-element" id="archive-year-{{ year }}">{{post.year}}</h2>
+    </div>
+    {% endif %}
+    {% include '_macro/post-collapse.html' %}
+    {% endfor %}
+</div>
+
+{% if is_index %}
+{% include '_partials/pagination.html' with url='/blog/archives' %}
+{% endif %}
+
+{% endblock %}
+
+{% block sidebar %}
+{% include '_macro/sidebar.html' %}
+{% endblock %}
+
+
+{% block script_extra %}
+{% if theme.use_motion %}
+
+{% endif %}
+{% endblock %}

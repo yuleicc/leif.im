@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include '_partials/head.html' %}
+    <title>{% block title %}{% endblock %}</title>
+</head>
+
+<body>
+    {% include '_partials/header.html' %}
+    <div id="body">
+        <div class="container">
+            <div class="row">
+                {% block content %}{% endblock %}
+                {% if theme.sidebar.display != 'remove' %}
+                {% block sidebar %}{% endblock %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer" role="contentinfo">
+        {% include '_partials/footer.html' %}
+        {% block footer %}{% endblock %}
+    </footer>
+
+</body>
+
+</html>

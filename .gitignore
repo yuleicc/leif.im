@@ -1,0 +1,11 @@
+__pycache__
+collectstatic
+*.py[cod]
+*.swp
+*.swo
+*.log
+.idea
+.DS_Store
+leif.sock
+/settings/prod.py
+/mysql

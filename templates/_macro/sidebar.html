@@ -1,0 +1,38 @@
+<div class="col-mb-12 col-offset-1 col-3 kit-hidden-tb" id="secondary" role="complementary">
+    <section class="widget">
+        <h3 class="widget-title">推荐文章</h3>
+        <ul class="widget-list">
+            <li><a href=""></a></li>
+        </ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+        <ul class="widget-list">
+            <li><a href="{permalink}"></a></li>
+        </ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">归档</h3>
+        <ul class="widget-list">
+            <li><a href="{permalink}"></a></li>
+        </ul>
+    </section>
+
+    {% if theme.links %}
+    <div class="links-of-blogroll motion-element {{ s }}">
+        <div class="links-of-blogroll-title">
+            <i class="fa  fa-fw fa-{{ theme.links_icon | default:'globe' | lower }}"></i>
+            {{ theme.links_title }}
+        </div>
+        <ul class="links-of-blogroll-list">
+            {% for name, link in theme.links %}
+            <li class="links-of-blogroll-item">
+                <a href="{{ link }}" title="{{ name }}" target="_blank">{{ name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</div>

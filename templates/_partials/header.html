@@ -1,0 +1,24 @@
+<header id="header" class="clearfix">
+    <div class="container">
+        <div class="row">
+            <div class="site-name col-mb-12 col-9">
+                <a id="logo" href="/">{{theme.site_title}}</a>
+                <p class="description">{{theme.site_subtitle}}</p>
+            </div>
+            <div class="site-search col-3 kit-hidden-tb">
+            </div>
+            <div class="col-mb-12">
+                <nav id="nav-menu" class="clearfix">
+                    {% if theme.menu %}
+                    {% for name, value in theme.menu.items %}
+                    <a href="{{value.path}}" rel="section">
+                        <i class="menu-item-icon fa fa-fw fa-{{value.icon | default:'question-circle' | lower }}"></i>
+                        {{value.label}}
+                    </a>
+                    {% endfor %}
+                    {% endif %}
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
