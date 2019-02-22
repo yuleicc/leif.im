@@ -30,4 +30,5 @@ handler500 = 'apps.blog.views.server_error_view'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('apps.blog.urls', 'blog')),
+    path('api/v1/', include('apis.api_v1.blog.urls', 'api-v1'))
 ]

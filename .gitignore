@@ -9,3 +9,4 @@ collectstatic
 leif.sock
 /settings/prod.py
 /mysql
+.vscode
