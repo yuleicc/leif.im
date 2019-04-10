@@ -1,7 +1,5 @@
 # run like $ pip install -r requirements/dev.txt
 -r base.txt
-mysqlclient==1.3.13
-django-debug-toolbar==1.10.1
-djangorestframework=3.9.1
-markdown=3.0.1
-django-filter=2.1.0
+django-debug-toolbar
+django-seed
+django-filter

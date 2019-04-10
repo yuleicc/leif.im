@@ -1,28 +1,27 @@
 ## 快速使用
 
-> 基于`python3.6` 和 `Django2.1.1`
+> 基于`python3.6` 和 `Django`
 
 1. 本地安装`git`、`docker`和`docker-compose`。
 2. `clone`项目：
    ```
-   git clone https://github.com/leif-yu/leif.im.git
+   git clone git@github.com:yuleicc/leif.im.git
    ```
 3. 启动：
    ```
-   cd dnmp
    docker-compose build
    docker-compose up
    docker ps
    docker exec -it xxxx /bin/bash
-   ./manage.py runserver
+   python manage.py runserver
    ```
 4. 创建数据库
 
    ```
-   ./manage.py makemigrations blog
-   ./manage.py sqlmigrate blog 0001
-   ./manage.py makemigrations
-   ./manage.py migrate
+   python manage.py makemigrations blog
+   python manage.py sqlmigrate blog 0001
+   python manage.py makemigrations
+   python manage.py migrate
    ```
 
 5. 创建超级用户
